@@ -153,7 +153,12 @@ def Kron_BFGS_update_per_layer(data_, params, l, action_h, action_a, step_):
 
         if action_h in ['Hessian-action-BFGS', 'Hessian-action-LBFGS']:
             mean_h_l = torch.mean(data_['h_N2'][l], dim=0).data
-            mean_h_l = torch.cat((mean_h_l, torch.mean(mean_h_l).unsqueeze(0)), dim=0)
+            
+#             mean_h_l = torch.cat((mean_h_l, torch.mean(mean_h_l).unsqueeze(0)), dim=0)
+            mean_h_l = torch.cat(
+                                (mean_h_l, torch.ones(1, device=params['device'])),
+                                dim=0
+                            )
         
             if action_h == 'Hessian-action-LBFGS':
                 s_l_h = LBFGS_Hv(
