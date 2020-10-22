@@ -221,8 +221,8 @@ def get_regularized_loss_and_acc_from_x_whole_dataset(model, x, t, reduction, pa
     model.eval()
     
     while i + N1 <= len(x):
-        with torch.no_grad():
-            z, test_a, test_h = model.forward(torch.from_numpy(x[i: i+N1]).to(device))
+#         with torch.no_grad():
+        z, test_a, test_h = model.forward(torch.from_numpy(x[i: i+N1]).to(device))
             
         torch_t_mb = torch.from_numpy(t[i: i+N1]).to(params['device'])
         list_loss.append(
