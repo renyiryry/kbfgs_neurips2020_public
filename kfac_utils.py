@@ -40,7 +40,9 @@ def kfac_update(data_, params):
     A_ = []
         
     
-    rho = min(1-1/(i+1), kfac_rho)
+#     rho = min(1-1/(i+1), kfac_rho)
+    rho = kfac_rho
+    
     homo_model_grad_N1 = get_homo_grad(model_grad_N1, params)
     homo_model_grad = get_homo_grad(model_grad, params)
         
