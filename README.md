@@ -1,5 +1,9 @@
 # kbfgs_neurips2020_v2
 
+This is the code for the paper [Practical Quasi-Newton Methods for Training Deep Neural Networks][kbfgs-paper].
+
+[kbfgs-paper]: https://arxiv.org/abs/2006.08877
+
 ## Specification of dependencies
 
 Python 3.7.6;
