@@ -30,3 +30,16 @@ For K-BFGS, K-BFGS(L), KFAC, change the arguments "lr" and "lambda_damping" in t
 For Adam, RMSprop, change the arguments "lr" and "RMSprop_epsilon";
 For SGD-momentum, change the arguments "lr".
 
+
+## BibTeX
+
+```
+@article{goldfarb2020practical,
+  title={Practical quasi-newton methods for training deep neural networks},
+  author={Goldfarb, Donald and Ren, Yi and Bahamou, Achraf},
+  journal={Advances in Neural Information Processing Systems},
+  volume={33},
+  pages={2386--2396},
+  year={2020}
+}
+```
